@@ -3,18 +3,38 @@ $(window).load(function(){
 	$('.container').fadeIn('fast');
 });
 $('document').ready(function(){
-		var vw;
-		$(window).resize(function(){
-			 vw = $(window).width()/2;
-			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-			$('#b11').animate({top:posisiTengah, left: vw - 120}, 500); // dari 150 jadi 120
-			$('#b22').animate({top:posisiTengah, left: vw - 80}, 500);  // dari 100 jadi 80
-			$('#b33').animate({top:posisiTengah, left: vw - 40}, 500);  // dari 50 jadi 40
-			$('#b44').animate({top:posisiTengah, left: vw}, 500);
-			$('#b55').animate({top:posisiTengah, left: vw + 40}, 500);  // dari 50 jadi 40
-			$('#b66').animate({top:posisiTengah, left: vw + 80}, 500);  // dari 100 jadi 80
-			$('#b77').animate({top:posisiTengah, left: vw + 120}, 500); // dari 150 jadi 120
-		});
+    var vw;
+    $(window).resize(function(){
+        vw = $(window).width()/2;
+        
+        // TAMBAHKAN BARIS INI
+        var posisiTengah = $(window).height() / 2;
+
+        $('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
+
+        // Di sini kita juga perlu logika if-else agar responsif saat di-resize
+        if ($(window).width() <= 768) {
+            // Jarak rapat untuk mobile
+            $('#b11').animate({top:posisiTengah, left: vw - 120}, 500);
+            $('#b22').animate({top:posisiTengah, left: vw - 80}, 500);
+            $('#b33').animate({top:posisiTengah, left: vw - 40}, 500);
+            $('#b44').animate({top:posisiTengah, left: vw}, 500);
+            $('#b55').animate({top:posisiTengah, left: vw + 40}, 500);
+            $('#b66').animate({top:posisiTengah, left: vw + 80}, 500);
+            $('#b77').animate({top:posisiTengah, left: vw + 120}, 500);
+        } else {
+            // Jarak lebar untuk desktop
+            $('#b11').animate({top:posisiTengah, left: vw - 350}, 500);
+            $('#b22').animate({top:posisiTengah, left: vw - 250}, 500);
+            $('#b33').animate({top:posisiTengah, left: vw - 150}, 500);
+            $('#b44').animate({top:posisiTengah, left: vw - 50}, 500);
+            $('#b55').animate({top:posisiTengah, left: vw + 50}, 500);
+            $('#b66').animate({top:posisiTengah, left: vw + 150}, 500);
+            $('#b77').animate({top:posisiTengah, left: vw + 250}, 500);
+        }
+    });
+
+    // ... (sisa kode Anda dari #turn_on dst. sudah benar) ...
 
 
 	$('#turn_on').click(function(){
