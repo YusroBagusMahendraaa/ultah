@@ -141,26 +141,39 @@ $('document').ready(function(){
 
 		
 	$('#wish_message').click(function(){
-     vw = $(window).width()/2;
-     // TAMBAHKAN BARIS INI untuk menghitung posisi tengah
-     var posisiTengah = $(window).height() / 2;
+    vw = $(window).width()/2;
+    var posisiTengah = $(window).height() / 2;
 
     $('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
     $('#b1').attr('id','b11');
-    $('#b2').attr('id','b22')
-    $('#b3').attr('id','b33')
-    $('#b4').attr('id','b44')
-    $('#b5').attr('id','b55')
-    $('#b6').attr('id','b66')
-    $('#b7').attr('id','b77')
-    // GANTI semua 'top:240' dengan 'top:posisiTengah'
-    $('#b11').animate({top:posisiTengah, left: vw-350},500);
-    $('#b22').animate({top:posisiTengah, left: vw-250},500);
-    $('#b33').animate({top:posisiTengah, left: vw-150},500);
-    $('#b44').animate({top:posisiTengah, left: vw-50},500);
-    $('#b55').animate({top:posisiTengah, left: vw+50},500);
-    $('#b66').animate({top:posisiTengah, left: vw+150},500);
-    $('#b77').animate({top:posisiTengah, left: vw+250},500);
+    $('#b2').attr('id','b22');
+    $('#b3').attr('id','b33');
+    $('#b4').attr('id','b44');
+    $('#b5').attr('id','b55');
+    $('#b6').attr('id','b66');
+    $('#b7').attr('id','b77');
+
+    // TAMBAHKAN LOGIKA IF-ELSE DI SINI
+    if ($(window).width() <= 768) {
+        // JIKA LAYAR HP (lebar <= 768px), GUNAKAN JARAK RAPAT
+        $('#b11').animate({top:posisiTengah, left: vw - 120}, 500);
+        $('#b22').animate({top:posisiTengah, left: vw - 80}, 500);
+        $('#b33').animate({top:posisiTengah, left: vw - 40}, 500);
+        $('#b44').animate({top:posisiTengah, left: vw}, 500);
+        $('#b55').animate({top:posisiTengah, left: vw + 40}, 500);
+        $('#b66').animate({top:posisiTengah, left: vw + 80}, 500);
+        $('#b77').animate({top:posisiTengah, left: vw + 120}, 500);
+    } else {
+        // JIKA LAYAR DESKTOP, GUNAKAN JARAK LEBAR (Nilai asli Anda)
+        $('#b11').animate({top:posisiTengah, left: vw - 350}, 500);
+        $('#b22').animate({top:posisiTengah, left: vw - 250}, 500);
+        $('#b33').animate({top:posisiTengah, left: vw - 150}, 500);
+        $('#b44').animate({top:posisiTengah, left: vw - 50}, 500);
+        $('#b55').animate({top:posisiTengah, left: vw + 50}, 500);
+        $('#b66').animate({top:posisiTengah, left: vw + 150}, 500);
+        $('#b77').animate({top:posisiTengah, left: vw + 250}, 500);
+    }
+
     $('.balloons').css('opacity','0.9');
     $('.balloons h2').fadeIn(3000);
     $(this).fadeOut('slow').delay(3000).promise().done(function(){
