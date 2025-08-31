@@ -7,13 +7,13 @@ $('document').ready(function(){
 		$(window).resize(function(){
 			 vw = $(window).width()/2;
 			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-			$('#b11').animate({top:posisiTengah, left: vw-150},500); // Nilai 350 diubah jadi 150
-			$('#b22').animate({top:posisiTengah, left: vw-100},500); // Nilai 250 diubah jadi 100
-			$('#b33').animate({top:posisiTengah, left: vw-50},500);  // Nilai 150 diubah jadi 50
-			$('#b44').animate({top:posisiTengah, left: vw},500);       // Dibuat pas di tengah
-			$('#b55').animate({top:posisiTengah, left: vw+50},500);   // Nilai 50 tetap
-			$('#b66').animate({top:posisiTengah, left: vw+100},500); // Nilai 150 diubah jadi 100
-			$('#b77').animate({top:posisiTengah, left: vw+150},500); // Nilai 250 diubah jadi 150
+			$('#b11').animate({top:posisiTengah, left: vw - 120}, 500); // dari 150 jadi 120
+			$('#b22').animate({top:posisiTengah, left: vw - 80}, 500);  // dari 100 jadi 80
+			$('#b33').animate({top:posisiTengah, left: vw - 40}, 500);  // dari 50 jadi 40
+			$('#b44').animate({top:posisiTengah, left: vw}, 500);
+			$('#b55').animate({top:posisiTengah, left: vw + 40}, 500);  // dari 50 jadi 40
+			$('#b66').animate({top:posisiTengah, left: vw + 80}, 500);  // dari 100 jadi 80
+			$('#b77').animate({top:posisiTengah, left: vw + 120}, 500); // dari 150 jadi 120
 		});
 
 
