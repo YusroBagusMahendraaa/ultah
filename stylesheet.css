@@ -432,17 +432,24 @@ audio {
         background-size: 60px 110px;
     }
 
+    /* BARU: Atur ulang margin pembungkus kue agar lebih turun */
+    .cake-cover {
+        margin-top: 50px; 
+    }
+    
+    .cake {
+        transform: scale(0.8);
+        margin-top: 0; /* Coba set margin kue ke 0 */
+    }
+
+    /* BARU: Perkecil margin atas pesan agar tidak mendorong kue */
+    .message {
+        margin-top: 30px;
+    }
+
     .message p {
         font-size: 18px;
         line-height: 1.4;
-    }
-	
-	.cake-cover {
-        margin-top: 20px; /* Atur ulang margin atas untuk mobile */
-    }
-    .cake {
-        transform: scale(0.8);
-        margin-top: -20px;
     }
 
     .navbar-fixed-bottom .col-md-6 {
