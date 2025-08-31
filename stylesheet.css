@@ -1056,7 +1056,7 @@ audio {
 	100% {
 		-ms-transform:translate(0px,0px);
 	}
-}o
+}
 @keyframes bannar_come {
 	0%{
 		transform:translate(0px,-1000px);
@@ -1301,41 +1301,32 @@ audio {
 /* ===== ATURAN CSS UNTUK TAMPILAN MOBILE ===== */
 /* ========================================= */
 
+/* ========================================= */
+/* ===== ATURAN CSS UNTUK TAMPILAN MOBILE ===== */
+/* ========================================= */
 @media (max-width: 768px) {
-
-    /* 1. Perkecil ukuran balon agar tidak tumpang tindih */
     .balloons {
-        width: 60px;       /* Ukuran lebar balon diperkecil */
-        height: 110px;     /* Ukuran tinggi balon diperkecil */
+        width: 60px;
+        height: 110px;
         background-size: 60px 110px;
     }
-
-    /* 2. Perkecil ukuran font pesan agar muat di layar */
     .message p {
-        font-size: 18px;   /* Ukuran font pesan diperkecil */
-        line-height: 1.4;  /* Atur jarak antar baris */
+        font-size: 18px;
+        line-height: 1.4;
     }
-
-    /* 3. Atur ulang ukuran kue */
     .cake {
-        /* Gunakan transform untuk skala tanpa merusak layout */
         transform: scale(0.8);
-        margin-top: -50px; /* Sesuaikan margin karena ukurannya berubah */
+        margin-top: -50px;
     }
-
-    /* 4. Buat tombol lebih mudah diakses */
     .navbar-fixed-bottom .col-md-6 {
-        /* Paksa kolom untuk tidak memiliki offset/margin aneh di mobile */
         margin-left: 0;
         width: 100%;
     }
-
     .btn-primary {
-        padding: 8px;      /* Perkecil padding tombol */
-        font-size: 12px;   /* Perkecil font tombol */
-        margin-bottom: 5px; /* Beri sedikit jarak jika tombol jadi bersusun */
+        padding: 8px;
+        font-size: 12px;
+        margin-bottom: 5px;
     }
-
 }
 /* ========================================= */
 /* ===== ATURAN CSS UNTUK TAMPILAN MOBILE ===== */
