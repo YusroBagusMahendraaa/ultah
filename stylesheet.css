@@ -2608,9 +2608,12 @@ display: none;
         font-size: 18px;
         line-height: 1.4;
     }
-    .cake {
+     .cake {
         transform: scale(0.8);
-        margin-top: -50px;
+        margin-top: -50px; /* Ini nilai saat ini */
+        /* Ganti menjadi nilai yang lebih besar, contoh: */
+        margin-top: -20px; /* Coba naikkan (kurangi angka negatifnya) */
+                           /* Atau bahkan positif jika Anda ingin di bawah balon */
     }
     .navbar-fixed-bottom .col-md-6 {
         margin-left: 0;
