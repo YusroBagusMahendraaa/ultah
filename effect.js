@@ -174,15 +174,15 @@ $('document').ready(function(){
     $('#b7').attr('id','b77');
 
     // TAMBAHKAN LOGIKA IF-ELSE DI SINI
-    if ($(window).width() <= 768) {
-        // JIKA LAYAR HP (lebar <= 768px), GUNAKAN JARAK RAPAT
-        $('#b11').animate({top:posisiTengah, left: vw - 120}, 500);
-        $('#b22').animate({top:posisiTengah, left: vw - 80}, 500);
-        $('#b33').animate({top:posisiTengah, left: vw - 40}, 500);
-        $('#b44').animate({top:posisiTengah, left: vw}, 500);
-        $('#b55').animate({top:posisiTengah, left: vw + 40}, 500);
-        $('#b66').animate({top:posisiTengah, left: vw + 80}, 500);
-        $('#b77').animate({top:posisiTengah, left: vw + 120}, 500);
+  // JIKA LAYAR HP (lebar <= 768px), GUNAKAN JARAK RAPAT & GESER KIRI
+		var geserKiri = 30; // Tambahkan variabel ini untuk menggeser sejauh 30px
+		$('#b11').animate({top:posisiTengah, left: vw - 120 - geserKiri}, 500);
+		$('#b22').animate({top:posisiTengah, left: vw - 80 - geserKiri}, 500);
+		$('#b33').animate({top:posisiTengah, left: vw - 40 - geserKiri}, 500);
+		$('#b44').animate({top:posisiTengah, left: vw - geserKiri}, 500); 
+		$('#b55').animate({top:posisiTengah, left: vw + 40 - geserKiri}, 500);
+		$('#b66').animate({top:posisiTengah, left: vw + 80 - geserKiri}, 500);
+		$('#b77').animate({top:posisiTengah, left: vw + 120 - geserKiri}, 500);
     } else {
         // JIKA LAYAR DESKTOP, GUNAKAN JARAK LEBAR (Nilai asli Anda)
         $('#b11').animate({top:posisiTengah, left: vw - 350}, 500);
