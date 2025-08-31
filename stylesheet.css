@@ -1337,7 +1337,20 @@ audio {
     }
 
 }
+/* ========================================= */
+/* ===== ATURAN CSS UNTUK TAMPILAN MOBILE ===== */
+/* ========================================= */
+@media (max-width: 768px) {
 
+    /* Perkecil ukuran balon agar tidak terpotong */
+    .balloons {
+        width: 60px;       /* Lebar asli 100px, diubah jadi 60px */
+        height: 110px;     /* Tinggi asli 183px, diubah jadi 110px */
+        background-size: 60px 110px; /* Samakan dengan width & height baru */
+    }
+
+    /* (Anda bisa tambahkan aturan mobile lainnya di sini) */
+}
     /*controlling tablet width*/
     /*@media only screen and (max-width: 720px){
     	.container {
