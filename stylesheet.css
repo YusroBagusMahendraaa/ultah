@@ -436,7 +436,10 @@ audio {
         font-size: 18px;
         line-height: 1.4;
     }
-
+	
+	.cake-cover {
+        margin-top: 20px; /* Atur ulang margin atas untuk mobile */
+    }
     .cake {
         transform: scale(0.8);
         margin-top: -20px;
