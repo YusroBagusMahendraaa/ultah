@@ -189,24 +189,20 @@ $('document').ready(function(){
 			$('.message').fadeIn('slow');
 		});
 		
-		var i;
+		var totalMessages = $('.message p').length;
+		var i = 1;
 
-		function msgLoop (i) {
-            $("p:nth-child("+i+")").fadeOut('slow').delay(1000).promise().done(function(){
-            i=i+1;
-            $("p:nth-child("+i+")").fadeIn('slow').delay(2500);
-            if(i==50){
-                $("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-                    $('.cake').fadeIn('fast');
-                });
-                
-            }
-            else{
-                msgLoop(i);
-            }           
-            });
-        }
-		msgLoop(0);
+		function msgLoop () {
+			if (i > totalMessages) {
+				$('.cake').fadeIn('fast');
+				return;
+			}
+			$('.message p:nth-child('+ i +')').fadeIn('slow').delay(2500).fadeOut('slow', function() {
+				i++;
+				msgLoop();
+			});
+		}
 		
+		msgLoop();
 	});
 });
